@@ -5,18 +5,14 @@
 
 using namespace std;
 
-// =====================================================
 // Estrutura para armazenar informações do vértice
-// =====================================================
 
 struct Vertice {
     int id;
     int grau;
 };
 
-// =====================================================
 // Leitura manual do grafo
-// =====================================================
 
 vector<vector<int>> lerGrafoManual() {
 
@@ -51,15 +47,11 @@ vector<vector<int>> lerGrafoManual() {
     return adj;
 }
 
-// =====================================================
-// Leitura do grafo por arquivo
 // Formato:
-//
 // n m
 // u v
 // u v
 // ...
-// =====================================================
 
 vector<vector<int>> lerGrafoArquivo(const string& nomeArquivo) {
 
@@ -94,9 +86,7 @@ vector<vector<int>> lerGrafoArquivo(const string& nomeArquivo) {
     return adj;
 }
 
-// =====================================================
 // Calcula os graus dos vértices
-// =====================================================
 
 vector<int> calcularGraus(
     const vector<vector<int>>& adj)
@@ -110,9 +100,7 @@ vector<int> calcularGraus(
     return graus;
 }
 
-// =====================================================
 // Ordenação decrescente por grau
-// =====================================================
 
 vector<Vertice> ordenarVertices(
     const vector<int>& graus)
@@ -135,9 +123,7 @@ vector<Vertice> ordenarVertices(
     return vertices;
 }
 
-// =====================================================
 // Verifica se um vértice pode receber uma cor
-// =====================================================
 
 bool podeReceberCor(
     int vertice,
@@ -154,9 +140,7 @@ bool podeReceberCor(
     return true;
 }
 
-// =====================================================
 // Algoritmo de Campello e Maculan
-// =====================================================
 
 vector<int> coloracaoCampelloMaculan(
     const vector<vector<int>>& adj)
@@ -227,9 +211,7 @@ vector<int> coloracaoCampelloMaculan(
     return cores;
 }
 
-// =====================================================
 // Exibe resultado final
-// =====================================================
 
 void exibirResultado(
     const vector<int>& cores)
@@ -257,9 +239,7 @@ void exibirResultado(
          << "\n";
 }
 
-// =====================================================
 // Exibe estatísticas do grafo
-// =====================================================
 
 void exibirEstatisticas(
     const vector<vector<int>>& adj,
@@ -291,9 +271,7 @@ void exibirEstatisticas(
          << maiorCor + 1 << endl;
 }
 
-// =====================================================
-// Programa principal
-// =====================================================
+// main
 
 int main() {
 
